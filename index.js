@@ -67,9 +67,10 @@ app.post('/api/shorturl/', async function (req, res) {
        })
      }
     
-  } // chiusura else validurl
-}) //chiudura app.post
+  } 
+}) 
 
+// RETRIEVE SAVED URL AND REDIRECTS
 app.get('/api/shorturl/:short?', async function (req, res) {
   
   const foundURL = await URL.findOne({
